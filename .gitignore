@@ -3,4 +3,4 @@ venv/
 
 # Конфигурационные файлы
 .env
-pycache/
+__pycache__/
