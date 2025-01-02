@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from thequest_tg import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    path('info_center/', views.info_center, name='info_center'),
+    path('', views.home, name='home'),
 ]
