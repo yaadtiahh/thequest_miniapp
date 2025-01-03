@@ -10,19 +10,37 @@
   <link rel="stylesheet" href="{% static 'css/template.css' %}">
   {% block css %}{% endblock %}
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="{% static 'js/template.js' %}" defer></script>
 </head>
 
 <body>
+
   <header class="header">
-    <nav class="nav">
-      <ul>
-        <li><a href="/quiz"><img src="{% static 'imgs/icons_nav/quiz.svg' %}">QUIZ</a></li>
-        <li><a href="/learn"><img src="{% static 'imgs/icons_nav/book.svg' %}">LEARN</a></li>
-        <li><a href="/"><img src="{% static 'imgs/icons_nav/home.svg' %}">HOME</a></li>
-        <li><a href="/invite"><img src="{% static 'imgs/icons_nav/invite.svg' %}">INVITE</a></li>
-        <li><a href="/profile"><img src="{% static 'imgs/icons_nav/profile.svg' %}">PROFILE</a></li>
-      </ul>
-    </nav>
+    <div class="header-profile">
+      <img id="avatar" alt="Аватарка пользователя">
+      <div class="username-levels">
+        <h1 id="tg-username"></h1>
+        <div class="reputation-level">
+          <p class="level">1 LVL</p>
+          <p class="reputation">1 REP</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="resources">
+      <div class="resources-values">
+        <div class="backpack">
+          <img src="{% static 'imgs/backpack_icon.svg' %}" alt="backpack_icon">
+          <p>17/30</p>
+        </div>
+        <hr>
+        <div class="money">
+          <img src="{% static 'imgs/money_icon.svg' %}" alt="money_icon">
+          <p>250</p>
+        </div>
+      </div>
+      <button class="resources-add">+</button>
+    </div>
   </header>
 
   <main>
@@ -31,13 +49,5 @@
     {% endblock %}
   </main>
     
-  <script>
-      const tg = window.Telegram.WebApp;
-      tg.ready();
-      window.addEventListener('load', function() {
-        var video = document.getElementById('videoBackground');
-        video.play(); // Программно запускаем воспроизведение
-      });
-  </script>
 </body>
 </html>

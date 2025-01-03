@@ -1,0 +1,144 @@
+/* Основные стили */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10px;
+  height: 50px;
+  width: auto;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+}
+
+.ava-profile {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc; /* Заменить цвет на изображение, если нужно */
+}
+
+#avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.username-levels {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 3px 3px 11px;
+}
+
+.username-levels h1 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+
+.reputation-level {
+  display: flex;
+  gap: 5px; /* Пробел между блоками LVL и REP */
+  margin-top: 4px;
+}
+
+.reputation-level p {
+  margin: 0;
+  font-size: 10px;
+  width: 43px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Стили для 1 LVL */
+.level {
+  color: #FFCE00; /* Цвет текста */
+  border: 1px solid #FFCE00; /* Цвет рамки */
+  background-color: rgba(255, 204, 0, 0.15); /* Прозрачный фон */
+  text-shadow: 0 0 3px #FFCE00; /* Эффект свечения */
+}
+
+/* Стили для 1 REP */
+.reputation {
+  color: #1FEB85; /* Цвет текста */
+  border: 1px solid #1FEB85; /* Цвет рамки */
+  background-color: rgba(31, 235, 133, 0.15); /* Прозрачный фон */
+  text-shadow: 0 0 3px #1FEB85; /* Эффект свечения */
+}
+
+/* Блок ресурсов */
+.resources {
+  display: flex;
+  align-items: center;
+  gap: 0; /* Убираем отступ между кнопкой и блоком resources-values */
+}
+
+.resources-values {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: url(/static/imgs/bg-balick.svg) center no-repeat;
+  background-size: cover; /* Убедимся, что фон полностью растягивается */
+  padding: 0 10px; /* Внутренние отступы */
+  overflow: hidden; /* Убираем лишние обрезания */
+  object-fit: contain;
+}
+
+.resources-values .backpack,
+.resources-values .money {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.resources-values img {
+  width: 20px;
+  height: 20px;
+}
+
+.resources-values p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.backpack p {
+  color: #FF4E47;
+}
+
+.money p {
+  color: #1FEB85;
+}
+
+.resources button {
+  width: 22px; /* Ширина кнопки */
+  height: 38px; /* Высота кнопки */
+  border: none;
+  background-color: #1FEB85; /* Цвет фона */
+  color: #000000; /* Цвет текста */
+  font-weight: bold; /* Жирность текста */
+  cursor: pointer;
+  margin: 0; /* Убираем отступы */
+  display: flex; /* Включаем Flexbox для выравнивания */
+  justify-content: center; /* Горизонтальное выравнивание текста */
+  align-items: center; /* Вертикальное выравнивание текста */
+}
+
+.resources hr {
+  height: 20px;
+  border: none;
+  border-left: 1px solid #1FEB85;
+}
