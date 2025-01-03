@@ -1,0 +1,29 @@
+{% load static %}
+
+<header class="header">
+  <div class="header-profile">
+    <img id="avatar" alt="Аватарка пользователя">
+    <div class="username-levels">
+      <h1 id="tg-username"></h1>
+      <div class="reputation-level">
+        <p class="level">1 LVL</p>
+        <p class="reputation">1 REP</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="resources">
+    <div class="resources-values">
+      <div class="backpack">
+        <img src="{% static 'imgs/backpack_icon.svg' %}" alt="backpack_icon">
+        <p>17/30</p>
+      </div>
+      <hr>
+      <div class="money">
+        <img src="{% static 'imgs/money_icon.svg' %}" alt="money_icon">
+        <p>250</p>
+      </div>
+    </div>
+    <button class="resources-add">+</button>
+  </div>
+</header>

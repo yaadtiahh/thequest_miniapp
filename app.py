@@ -9,7 +9,7 @@ load_dotenv()
 
 async def start(update: Update, context):
     # Ваш актуальный ngrok URL
-    web_app_url = "https://b7c5-46-53-254-170.ngrok-free.app"
+    web_app_url = "https://068a-46-53-254-170.ngrok-free.app/"
 
     # Настраиваем кнопку с Mini App
     button = KeyboardButton(
@@ -19,7 +19,7 @@ async def start(update: Update, context):
     reply_markup = ReplyKeyboardMarkup([[button]], resize_keyboard=True)
 
     # Отправляем сообщение с кнопкой
-    await update.message.reply_text("Привет! Вот твой Mini App:", reply_markup=reply_markup)
+    await update.message.reply_text("Welcome to The Quest!", reply_markup=reply_markup)
 
 # Инициализация приложения
 bot_token = os.getenv("TG_BOT_TOKEN")

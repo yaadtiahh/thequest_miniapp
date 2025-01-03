@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="navigation-bar"> 
+  <div class="navigation-icons">
+    <a href="{% url 'info_center' %}" class="nav-link {% if active_page == 'info_center' %}active{% endif %}">
+      <img src="{% static 'imgs/infocenter-icon.svg' %}" alt="InfoCenter" class="nav-icon">
+    </a>
+    <a href="{% url 'map' %}" class="nav-link {% if active_page == 'map' %}active{% endif %}">
+      <img src="{% static 'imgs/map-icon.svg' %}" alt="Map" class="nav-icon">
+    </a>
+    <a href="{% url 'profile' %}" class="nav-link {% if active_page == 'profile' %}active{% endif %}">
+      <img src="{% static 'imgs/profile-icon.svg' %}" alt="Profile" class="nav-icon">
+    </a>
+    
+  </div>
+</div>

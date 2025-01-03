@@ -20,6 +20,8 @@ from thequest_tg import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     
+    path('', views.map, name='info_center'),  # Пустой путь перенаправляется на страницу карты
     path('info_center/', views.info_center, name='info_center'),
-    path('', views.home, name='home'),
+    path('map/', views.map, name='map'),
+    path('profile/', views.profile, name='profile'),
 ]
