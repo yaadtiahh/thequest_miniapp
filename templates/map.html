@@ -4,24 +4,12 @@
 <link rel="stylesheet" href="{% static 'css/map.css' %}">
 
 {% block content %}
-<div id="map" style="height: 100%; width: 100%;"></div>
-<script>
-  function initMap() {
-    // Определите начальные координаты карты
-    const centerCoordinates = { lat: 25.276987, lng: 55.296249 }; // Дубай
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: centerCoordinates,
-      zoom: 10, // Уровень приближения
-    });
-
-    // Добавление маркера
-    const marker = new google.maps.Marker({
-      position: centerCoordinates,
-      map: map,
-      title: "Дубай",
-    });
-  }
-</script>
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgbvovrqfj2NWfE2Zaddhmkng-O5bXzYw&q=New+York,USA"
+  allowfullscreen>
+</iframe>
 
 {% endblock %}
 
